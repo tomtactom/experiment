@@ -43,6 +43,7 @@
         } else {
           echo "Error: No group.";
         }
+      }
     ?>
 </body>
 </html>
