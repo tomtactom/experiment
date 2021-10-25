@@ -27,6 +27,7 @@
           <iframe width="640px" height= "480px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=njUQUMcHTkGjOf8CQAuBk00UEYZwLPtPrgaiHY3vIolUN0lRWkM1Mk5LSE9LMlhNWldKVk9MTzM4OS4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
           <form method="post">
             <input type="hidden" name="next" value="break">
+            <p>Bitte klicken Sie erst auf diesen Knopf, wenn Sie in dem oberen Fenster dazu aufgefordert werden.</p>
             <button>Weiter</button>
           </form>
           <?php
@@ -35,6 +36,7 @@
           <iframe style="width:100%;" height="500px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=njUQUMcHTkGjOf8CQAuBk00UEYZwLPtPrgaiHY3vIolUMlVWS1FQTk1FSDBGUUQ2VU82OU1SQTI2TC4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
           <form method="post">
             <input type="hidden" name="next" value="music">
+            <p>Bitte klicken Sie erst auf diesen Knopf, wenn Sie in dem oberen Fenster dazu aufgefordert werden.</p>
             <button>Weiter</button>
           </form>
           <?php
