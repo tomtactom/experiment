@@ -1,9 +1,3 @@
-<?php
-/*
-
-*/
-
-?>
 <html lang="de">
 <head>
   <meta charset="utf-8">
@@ -19,24 +13,27 @@
   <meta name="publisher" content="Hochschule Rhein-Waal">
   <meta name="date" content="2021-10-22">
 	<link rel="stylesheet" href="./main.css">
-
+   <script src="myscripts.js"></script>
 </head>
 <body>
+
   <article>
     <form class="" action="index.html" method="post">
 
 
-      <div class="question">
+      <div class="question" id="i1" style="display: block; margin-left: auto; margin-right: auto; min-width: 320px; width:30%;">
         <label>
-          <input type="text" placeholder="" minlength="" maxlength="" required>
+            <strong style="display:block;">Wie konzentiert konzentiert konzentiert fühlen sie sich?</strong>
+            <input name="concentration" id="concentration_slider" type="range" min="1" max="5" step="1.0" value="3" style="display: block; margin-left: auto; margin-right: auto; width:200px;">
+          </label>
+          <button id="" onclick="next(2)">Weiter</button>
+      </div>
+        
+    <div class="question" id="i1" style="visibility:hidden;">
+        <label>
+          <input type="text" placeholder="123" minlength="" maxlength="" required>
         </label>
-      </div>
-
-      <div class="question">
-        <label>
-          <input type="range" min="1" max="5" step="1.0" value="3">
-         </label>
-      </div>
+      </div
 
 
 
