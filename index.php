@@ -85,10 +85,19 @@ if ($_COOKIE['part'] == 1) {
       startTimer(fiveMinutes, display);
     };
     </script>
-    <meta http-equiv="refresh" content="30">
-    <span id="time" style="font-size: 4.5rem; position: fixed; top: 50%; left: 50%;">05:00</span>
+    <meta http-equiv="refresh" content="30"> <!-- Sekundenzahl eingeben, wie lange die Pause dauern soll -->
+    <section style="width: 900px; margin-left: auto; margin-right: auto;">
+      <p>Nun folgt die angekündigte Pause. Es kann sein, dass Sie etwas auf Ihren Kopfhörern höhren, es kann allerdings auch sein, dass Sie nichts hören. Beides ist vollkommen normal.<br>
+      Sobald der Countdown abgelaufen ist, starten Sie bitte direkt mit dem d2-Test.</p>
+      <span id="time" style="font-size: 4.5rem; position: fixed; top: 50%; left: 50%;">05:00</span>
+    </section>
     <?php
     setcookie("part", 3, time()+(3600*2));
+
+    // Vpn ist in Gruppe 2 (Testgruppe) ; Isochronic tones
+    if ($_COOKIE['group'] == "g2") {
+      echo '<embed src="./Isochrone_Beats_10Hz.mp3" loop="true" autostart="true" width="2" height="0">';
+    }
   }
 
   // d2-Test wird bearbeitet
