@@ -157,12 +157,19 @@ if ($_COOKIE['part'] == 1) {
       startTimer(fiveMinutes, display);
     };
     </script>
+    <meta http-equiv="refresh" content="300">
+    <span id="time" style="font-size: 3rem;position: fixed; top: 50%; left: 50%;">05:00</span>
     <?php
+    setcookie("part", 3), time()+(3600*2));
+
     // Vpn ist in Gruppe 1 (Kontrollgruppe) ; Pause
     if ($_COOKIE['group'] == "g1") {
-      ?>
-      <span id="time" style="font-size: 3rem;position: fixed; top: 50%; left: 50%;">05:00</span>
-      <?php
+      // ###
+    }
+
+    // Vpn ist in Gruppe 2 (Testgruppe) ; Isochronic tones
+    if ($_COOKIE['group'] == "g1") {
+      echo '<embed src="/10hz_isochronic_tones.mp3" loop="true" autostart="true" width="2" height="0">';
     }
   }
   ?>
