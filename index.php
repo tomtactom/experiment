@@ -24,12 +24,12 @@ if(!isset($_COOKIE['group'])) {
 
   // Randomisierte Einteilung der Gruppen in Gruppe 1 (Kontrollgruppe) und Gruppe 2 (Testgruppe)
   setcookie("group", "g".strval(rand(1,2)), time()+(3600*2));
-  setcookie("part", 1), time()+(3600*2));
+  setcookie("part", 1, time()+(3600*2));
   echo '<meta http-equiv="refresh" content="1">';
 }
 
 if($_GET['part'] == 2) {
-  setcookie("part", 2), time()+(3600*2));
+  setcookie("part", 2, time()+(3600*2));
   echo '<meta http-equiv="refresh" content="1">';
 }
 
@@ -88,7 +88,7 @@ if ($_COOKIE['part'] == 1) {
     <meta http-equiv="refresh" content="300">
     <span id="time" style="font-size: 3rem;position: fixed; top: 50%; left: 50%;">05:00</span>
     <?php
-    setcookie("part", 3), time()+(3600*2));
+    setcookie("part", 3, time()+(3600*2));
 
     // Vpn ist in Gruppe 1 (Kontrollgruppe) ; Pause
     if ($_COOKIE['group'] == "g1") {
