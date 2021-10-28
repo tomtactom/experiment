@@ -125,7 +125,7 @@ if ($_COOKIE['part'] == 1) {
   if ($_COOKIE['part'] == 4) {
     echo '<embed src="./bell.mp3" autostart="true" width="2" height="0">';
   ?>
-  <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 200px; font-size: 2.5rem;">
+  <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 2rem;">
     <p><strong>Bitte hören Sie mit dem bearbeiten des Test auf!</strong><br>
       Bitte füllen Sie nun den letzten Fragebogen aus und klicken Sie unten auf <i>Weiter</i>.
     </p>
