@@ -20,6 +20,10 @@
   <article>
     <?php
       if(isset($_POST['next'])) {
+        setcookie($_POST['next'], $_COOKIE['next'], time()+(3600*2));
+        echo "<script>location.reload();</script>";
+      }
+      if (isset($_COOKIE['next'])) {
         ?>
         <span id="time">05:00</span>
         <script>
@@ -47,12 +51,12 @@
         };
         </script>
         <?php
-        if($_POST['next'] == 'break') {
+        if($_COOKIE['next'] == 'break') {
 
-        } elseif ($_POST['next'] == 'music') {
+        } elseif ($_COOKIE['next'] == 'music') {
 
         }
-    }
+      }
 
       if(!isset($_COOKIE['group'])) {
         setcookie("group", "g".strval(rand(1,2)), time()+(3600*2));
