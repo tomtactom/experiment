@@ -89,7 +89,13 @@ if ($_COOKIE['part'] == 1) {
     <span id="time" style="font-size: 4.5rem; position: fixed; top: 50%; left: 50%;">05:00</span>
     <?php
     setcookie("part", 3, time()+(3600*2));
+  }
 
+  // d2-Test wird bearbeitet
+  if ($_COOKIE['part'] == 3) {
+    ?>
+    <p>Bitte bearbeiten Sie den Test.</p>
+    <?php
     // Vpn ist in Gruppe 1 (Kontrollgruppe) ; Pause
     if ($_COOKIE['group'] == "g1") {
       echo '';
