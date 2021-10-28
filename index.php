@@ -19,10 +19,12 @@
 
   <article>
     <?php
+    /*
       if(isset($_POST['next'])) {
         setcookie($_POST['next'], $_COOKIE['next'], time()+(3600*2));
         header("Refresh:0");
       }
+
       if (isset($_COOKIE['next'])) {
         ?>
         <span id="time">05:00</span>
@@ -85,7 +87,22 @@
         } else {
           echo "Error: No group.";
         }
-      }
+      }*/
     ?>
+-------------------------------------
+<?php
+if(!isset($_COOKIE['group'])) {
+  setcookie("group", "g".strval(rand(1,2)), time()+(3600*2));
+  echo '<meta http-equiv="refresh" content="1">';
+}
+?>
+
+
+
+
+
+
+
+
 </body>
 </html>
