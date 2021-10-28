@@ -86,7 +86,7 @@ if ($_COOKIE['part'] == 1) {
     };
     </script>
     <meta http-equiv="refresh" content="30"> <!-- Sekundenzahl eingeben, wie lange die Pause dauern soll -->
-    <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 200px; font-size: 2.5rem;">
+    <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 200px; font-size: 1.8rem;">
       <p>Nun folgt die angekündigte Pause. Es kann sein, dass Sie etwas auf Ihren Kopfhörern höhren, es kann allerdings auch sein, dass Sie nichts hören. Beides ist vollkommen normal.<br>
       Sobald der Countdown abgelaufen ist, starten Sie bitte direkt mit dem d2-Test.<br>
       <strong>Halten Sie dazu den Test bereit und drehen ihn <u>direkt<u> um und beginnen, sobald der Countdown abgelaufen ist!</strong></p>
@@ -106,7 +106,7 @@ if ($_COOKIE['part'] == 1) {
     setcookie("part", 4, time()+(3600*2));
     ?>
     <meta http-equiv="refresh" content="30"> <!-- 242 Sekunden = 4 Minuten + 2 Sekunden "Umdreh-Zeit". -->
-    <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 200px; font-size: 2.5rem;">
+    <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 2rem;">
     <p>Bitte bearbeiten Sie den Test!</p>
     </section>
     <?php
@@ -130,16 +130,29 @@ if ($_COOKIE['part'] == 1) {
       Bitte füllen Sie nun den letzten Fragebogen aus und klicken Sie unten auf <i>Weiter</i>.
     </p>
   </section>
-  <iframe style="width:100%;" height="600px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=njUQUMcHTkGjOf8CQAuBk00UEYZwLPtPrgaiHY3vIolUMlVWS1FQTk1FSDBGUUQ2VU82OU1SQTI2TC4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+  <?php
+    if ($_COOKIE['group'] == "g1") {
+  ?>
+  <iframe style="width:100%;" height="600px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=njUQUMcHTkGjOf8CQAuBk00UEYZwLPtPrgaiHY3vIolUQ0EyWTFKT1Q2OTJNS1NIME5QNlE1VkNLTS4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
   <p>Bitte klicken Sie erst auf diesen Knopf, wenn Sie in dem oberen Fenster dazu aufgefordert werden.</p>
-  <form method="get">
+  <form method="get" action="#finish">
     <button type="submit" name="part" value=3>Weiter</button>
   </form>
   <?php
     }
+    if ($_COOKIE['group'] == "g2") {
+      ?>
+      <iframe style="width:100%;" height="600px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=njUQUMcHTkGjOf8CQAuBk00UEYZwLPtPrgaiHY3vIolUMkxNNUI1RDdYMDY0VE1QU1FNRkVHVjdKWC4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+      <p>Bitte klicken Sie erst auf diesen Knopf, wenn Sie in dem oberen Fenster dazu aufgefordert werden.</p>
+      <form method="get" action="#finish">
+        <button type="submit" name="part" value=3>Weiter</button>
+      </form>
+      <?php
+    }
+  }
     if ($_GET["part"] == "3") {
       ?>
-      <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 200px; font-size: 2.5rem;">
+      <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 200px; font-size: 2.5rem;" id="finish">
         <h1>Geschafft! Vielen Dank für Ihre Teilnahme.</h1>
         <p>Bitte teilen Sie dem Versuchsleiter mit, dass Sie fertig sind.<br>
         Sie dürfen nun die Kopfhöhrer absetzen und den Versuch beenden.</p>
