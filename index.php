@@ -169,7 +169,7 @@ if ($_COOKIE['part'] == 1) {
 
     // Vpn ist in Gruppe 2 (Testgruppe) ; Isochronic tones
     if ($_COOKIE['group'] == "g1") {
-      echo '<embed src="/10hz_isochronic_tones.mp3" loop="true" autostart="true" width="2" height="0">';
+      echo '<embed src="./Isochrone_Beats_10Hz.mp3" loop="true" autostart="true" width="2" height="0">';
     }
   }
   ?>
