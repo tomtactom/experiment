@@ -21,7 +21,7 @@
     <?php
       if(isset($_POST['next'])) {
         setcookie($_POST['next'], $_COOKIE['next'], time()+(3600*2));
-        echo "<script>location.reload();</script>";
+        header("Refresh:0");
       }
       if (isset($_COOKIE['next'])) {
         ?>
