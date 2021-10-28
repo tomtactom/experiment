@@ -80,13 +80,13 @@ if ($_COOKIE['part'] == 1) {
     }
 
     window.onload = function () {
-      var fiveMinutes = 60 * 5,
+      var fiveMinutes = 60 * 0.5,
           display = document.querySelector('#time');
       startTimer(fiveMinutes, display);
     };
     </script>
     <meta http-equiv="refresh" content="300">
-    <span id="time" style="font-size: 3rem;position: fixed; top: 50%; left: 50%;">05:00</span>
+    <span id="time" style="font-size: 4.5rem; position: fixed; top: 50%; left: 50%;">05:00</span>
     <?php
     setcookie("part", 3, time()+(3600*2));
 
