@@ -28,7 +28,7 @@ if(!isset($_COOKIE['group'])) {
   echo '<meta http-equiv="refresh" content="1">';
 }
 
-if($_GET['part'] == 2 && !isset($_COOKIE['part'])) {
+if($_GET['part'] == 2 && $_COOKIE['part'] !>= 2) {
   setcookie("part", 2, time()+(3600*2));
   echo '<meta http-equiv="refresh" content="1">';
 }
