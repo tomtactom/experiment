@@ -152,7 +152,7 @@ if ($_COOKIE['part'] == 1) {
   }
     if ($_GET["part"] == "3") {
       ?>
-      <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 500px; font-size: 2.5rem;" id="finish">
+      <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 600px; font-size: 2.5rem;" id="finish">
         <h1>Geschafft! Vielen Dank für Ihre Teilnahme.</h1>
         <p>Bitte teilen Sie dem Versuchsleiter mit, dass Sie fertig sind.<br>
         Sie dürfen nun die Kopfhöhrer absetzen und den Versuch beenden.</p>
