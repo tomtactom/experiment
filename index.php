@@ -158,6 +158,10 @@ if ($_COOKIE['part'] == 1) {
         Sie dürfen nun die Kopfhöhrer absetzen und den Versuch beenden.</p>
       </section>
       <?php
+
+      // Alle Cookies löschen
+      setcookie("group", "", time()-3600);
+      setcookie("part", "", time()-3600);
     }
   ?>
 
