@@ -21,6 +21,7 @@
     <?php
       if(!isset($_COOKIE['group'])) {
         setcookie("group", "g".strval(rand(1,2)), time()+(3600*2));
+        echo "<script>location.reload();</script>";
       } else {
         if ($_COOKIE['group'] == "g1" && !isset($_COOKIE['next'])) {
           ?>
