@@ -80,12 +80,12 @@ if ($_COOKIE['part'] == 1) {
     }
 
     window.onload = function () {
-      var fiveMinutes = 60 * 0.5,
+      var fiveMinutes = 60 * 5,
           display = document.querySelector('#time');
       startTimer(fiveMinutes, display);
     };
     </script>
-    <meta http-equiv="refresh" content="30"> <!-- Sekundenzahl eingeben, wie lange die Pause dauern soll -->
+    <meta http-equiv="refresh" content="300"> <!-- Sekundenzahl eingeben, wie lange die Pause dauern soll -->
     <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 200px; font-size: 1.8rem;">
       <p>Nun folgt die angekündigte Pause. Es kann sein, dass Sie etwas auf Ihren Kopfhörern höhren, es kann allerdings auch sein, dass Sie nichts hören. Beides ist vollkommen normal.<br>
       Sobald der Countdown abgelaufen ist, starten Sie bitte direkt mit dem d2-Test.<br>
@@ -105,26 +105,22 @@ if ($_COOKIE['part'] == 1) {
   if ($_COOKIE['part'] == 3) {
     setcookie("part", 4, time()+(3600*2));
     ?>
-    <meta http-equiv="refresh" content="30"> <!-- 242 Sekunden = 4 Minuten + 2 Sekunden "Umdreh-Zeit". -->
+    <meta http-equiv="refresh" content="242"> <!-- 242 Sekunden = 4 Minuten + 2 Sekunden "Umdreh-Zeit". -->
     <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 2rem;">
     <p>Bitte bearbeiten Sie den Test!</p>
     </section>
-    <?php
-    // Vpn ist in Gruppe 1 (Kontrollgruppe) ; Pause
-    if ($_COOKIE['group'] == "g1") {
-      echo '';
-    }
 
-    // Vpn ist in Gruppe 2 (Testgruppe) ; Isochronic tones
-    if ($_COOKIE['group'] == "g2") {
-      echo '<embed src="./Isochrone_Beats_10Hz.mp3" loop="true" autostart="true" width="2" height="0">';
-    }
-  }
+    <?php
+        // Vpn ist in Gruppe 2 (Testgruppe) ; Isochronic tones
+        if ($_COOKIE['group'] == "g2") {
+          echo '<embed src="./Isochrone_Beats_10Hz.mp3" loop="true" autostart="true" width="2" height="0">';
+        }
+      }
 
   // Bearbeitungszeit des Tests ist vorbei. After-Fragebogen wird bearbeitet.
   if ($_COOKIE['part'] == 4) {
-    echo '<embed src="./bell.mp3" autostart="true" width="2" height="0">';
   ?>
+  <embed src="./bell.mp3" autostart="true" width="2" height="0">
   <section style="width: 900px; margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 2rem;">
     <p><strong>Bitte hören Sie mit dem bearbeiten des Test auf!</strong><br>
       Bitte füllen Sie nun den letzten Fragebogen aus und klicken Sie unten auf <i>Weiter</i>.
@@ -164,13 +160,5 @@ if ($_COOKIE['part'] == 1) {
       setcookie("part", "", time()-3600);
     }
   ?>
-
-
-
-
-
-
-
-
 </body>
 </html>
