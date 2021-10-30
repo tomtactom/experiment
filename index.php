@@ -97,7 +97,7 @@ if ($_COOKIE['part'] == 1) {
 
     // Vpn ist in Gruppe 2 (Testgruppe) ; Isochronic tones
     if ($_COOKIE['group'] == "g2") {
-      echo '<embed src="./Isochronic_Tone_175_13Hz.wav" loop="true" autostart="true" width="2" height="0">';
+      echo '<audio autoplay><source src="Isochronic_Tone_175_13Hz.wav" type="audio/x-wav" /></audio>';
     }
   }
 
@@ -113,7 +113,7 @@ if ($_COOKIE['part'] == 1) {
     <?php
         // Vpn ist in Gruppe 2 (Testgruppe) ; Isochronic tones
         if ($_COOKIE['group'] == "g2") {
-          echo '<embed src="./Isochronic_Tone_175_13Hz.wav" loop="true" autostart="true" width="2" height="0">';
+          echo '<audio autoplay><source src="Isochronic_Tone_175_13Hz.wav" type="audio/x-wav" /></audio>';
         }
       }
 
