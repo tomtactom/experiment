@@ -1,7 +1,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Experiment</title>
+  <title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="language" content="de">
   <meta name="audience" content="experiment">
@@ -13,7 +13,6 @@
   <meta name="publisher" content="Hochschule Rhein-Waal">
   <meta name="date" content="2021-10-22">
 	<link rel="stylesheet" href="./main.css">
-   <script src="myscripts.js"></script>
 </head>
 <body>
 
@@ -80,7 +79,7 @@ if ($_COOKIE['part'] == 1) {
     }
 
     window.onload = function () {
-      var fiveMinutes = 60 * 5,
+      var fiveMinutes = (60 * 5) - 4,
           display = document.querySelector('#time');
       startTimer(fiveMinutes, display);
     };
